@@ -1,0 +1,282 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    background-image: url('background\ white.jpg');
+    background-size:150vh;
+}
+
+body.dark-mode {
+    background-image: url('backgroundwhite.jpg');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8e99b; /* Light mode background */
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark mode background */
+    color: white; /* Text color for dark mode */
+}
+
+header {
+    background: linear-gradient(to right, #0cbcd3 40%, #106a9e 60%);/* Light mode header */
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f; /* Dark mode header */
+    background: linear-gradient(to right, #086672 40%, #2a3338 60%);
+}
+
+/* Button for dark mode toggle */
+.theme-toggle {
+    margin-left: 20px;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Other sections, including backgrounds and text colors */
+.resume-container,
+.projects-container,
+.hobbies-container,
+.gallery-container,
+.contact {
+    background-color: #fff; /* Light mode container background */
+}
+
+body.dark-mode .resume-container,
+body.dark-mode .projects-container,
+body.dark-mode .hobbies-container,
+body.dark-mode .gallery-container,
+body.dark-mode .contact,
+body.dark-mode .hero{
+    background: linear-gradient(to right, #086672 40%, #2a3338 60%); /* Dark mode container background */
+    color: white; /* Text color for dark mode */
+}
+
+/* Update link styles */
+.nav-links a {
+    color: #fff; /* Light mode link color */
+}
+
+body.dark-mode .nav-links a {
+    color: white; /* Dark mode link color */
+}
+
+/* Add transition effects for smooth switching */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-container,
+.projects-container,
+.hobbies-container,
+.gallery-container,
+.contact {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8e99b;
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:gray;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(51, 255, 0);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links  :hover{
+    color:rgb(12, 12, 10);
+    gap: 20px;
+    display:flex;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.btn-group :hover{
+    color:white;
+    gap: 20px;
+    display: contents;
+}
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: linear-gradient(to right, #0cbcd3 61%, #106a9e 39%);
+    
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+/* Section styling */
+.section {
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-container,
+.projects-container,
+.hobbies-container,
+.gallery-container,
+.contact {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to right, #0cbcd3 61%, #106a9e 39%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+} 
+
+.project-item,
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gallery-item  {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item :hover {
+    transform: scale(1.40);
+}
+.project-details {
+    padding: 15px;
+}
+
+/* Hobbies section */
+.hobby {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.hobby-text {
+    flex: 1;
+}
+
+.hobby-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #10e468;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: gray;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Contact section */
+.contact-info {
+    margin: 20px 0;
+}
